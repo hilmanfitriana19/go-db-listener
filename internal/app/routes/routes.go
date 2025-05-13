@@ -14,7 +14,7 @@ func InitRoutes(f *fiber.App, db *sqlx.DB, validate *customValidator.CustomStruc
 	v4.Get("/prv-health-check", func(c *fiber.Ctx) error {
 		return c.JSON(fiber.Map{
 			"success": true,
-			"message": "FABD Core Provisioning Service is Running Properly",
+			"message": "Service is Running Properly",
 		})
 	})
 

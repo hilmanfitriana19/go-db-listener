@@ -9,6 +9,7 @@ import (
 	"github.com/gofiber/fiber/v2/middleware/limiter"
 	"github.com/hilmanfitriana19/go-db-listener/internal/app/routes"
 	"github.com/hilmanfitriana19/go-db-listener/internal/infrastructure/databases/postgres"
+	"github.com/hilmanfitriana19/go-db-listener/internal/listener"
 	"github.com/hilmanfitriana19/go-db-listener/pkg/config"
 	"github.com/hilmanfitriana19/go-db-listener/pkg/customValidator"
 	"github.com/hilmanfitriana19/go-db-listener/pkg/errorHandler"
@@ -39,6 +40,9 @@ func (a *App) Setup() {
 	// Setup DB Connection : Postgres
 	pgCon := postgres.InitConnection()
 	pgDb, err := pgCon.GetDB()
+
+	go listener.StartListener(config.GetConfig().DbDetails, "user_changes", nil)
+
 	if err != nil {
 		logging.Logger().Errorf("Failed to connect to database: %v", err)
 	}
