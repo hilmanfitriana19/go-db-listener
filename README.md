@@ -1,5 +1,4 @@
-# fabd-core-provisioning-service
-
+# go-db-listener
 
 
 ## Getting started
@@ -15,14 +14,14 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
-git remote add origin https://gitlab.playcourt.id/fab-digital/core-v4/fabd-core-provisioning-service.git
+git remote add origin https://github.com/hilmanfitriana19/go-db-listener.git
 git branch -M master
 git push -uf origin master
 ```
 
 ## Integrate with your tools
 
-- [ ] [Set up project integrations](https://gitlab.playcourt.id/fab-digital/core-v4/fabd-core-provisioning-service/-/settings/integrations)
+- [ ] [Set up project integrations](https://github.com/hilmanfitriana19/go-db-listener/-/settings/integrations)
 
 ## Collaborate with your team
 
